@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: auto;
+        height: 200px;
+        background-color: orange;
+      }
+      .d_inline_block {
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        margin-right: 30px;
+      }
+      .d_inline_block:first-child {
+        background-color: skyblue;
+      }
+      .d_inline_block:nth-child(2) {
+        background-color: green;
+      }
+      .d_inline_block:last-child {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="d_inline_block">HTML</span>
+      <span class="d_inline_block">CSS</span>
+      <span class="d_inline_block">Javascript</span>
+    </div>
+  </body>
+</html>
