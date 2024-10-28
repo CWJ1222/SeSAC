@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1:hover {
+        background-color: black;
+        color: white;
+      }
+      #textbox:focus {
+        background-color: pink;
+      }
+      #red:checked + label {
+        background-color: red;
+        color: white;
+      }
+      input[type='checkbox']#blue:checked + label {
+        background-color: blue;
+        color: white;
+      }
+      #yellow:checked + label {
+        background-color: yellow;
+        color: black;
+      }
+      #btn_submit {
+        background-color: blueviolet;
+        color: white;
+        border-radius: 7px;
+        height: 30px;
+        width: 50px;
+        margin-left: 500px;
+      }
+      #btn_submit:active {
+        background-color: red;
+        color: azure;
+        margin-left: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>건의사항을 적어주세요</h1>
+    <textarea
+      id="textbox"
+      rows="20"
+      cols="100"
+      placeholder="건의 사항 ♧ ♣"
+    ></textarea>
+    <br />
+    <input type="checkbox" id="red" /><label for="red">빨강</label>
+    <input type="checkbox" id="blue" /><label for="blue">파랑</label>
+    <input type="checkbox" id="yellow" /><label for="yellow">노랑</label>
+    <br />
+    <input type="submit" id="btn_submit" />
+  </body>
+</html>
