@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1 {
+        background-color: beige;
+      }
+      .box1 p {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+      }
+      /*
+      .box1 .a2 {
+        margin-left: 100px;
+      }*/
+      .box1 .a2 {
+        position: relative;
+        top: 0;
+        left: 100px;
+      }
+      .box2 {
+        background-color: orange;
+        position: relative;
+      }
+      .box2 p {
+        width: 100px;
+        height: 100px;
+        background-color: royalblue;
+      }
+      /*
+      .box1 .a2 {
+        margin-left: 100px;
+      }*/
+      .box2 .b2 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      }
+      .box3 {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <p class="a1">a1</p>
+      <p class="a2">a2</p>
+      <p class="a3">a3</p>
+    </div>
+    <div class="box2">
+      <p class="b1">b1</p>
+      <p class="b2">b2</p>
+      <p class="b3">b3</p>
+    </div>
+    <div class="box3">position:fixed</div>
+  </body>
+</html>
