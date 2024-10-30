@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  background: linear-gradient(white, orangered);
+}
+div {
+  width: 500px;
+  height: 500px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 100px;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+div.item {
+  width: 100px;
+  height: 100px;
+}
+
+.position-relative {
+  /* 원래 있던 자리가 기준.
+  원래 자리가 남아 있음
+  문서 흐름을 해치지 않음
+  */
+  background-color: aquamarine;
+  position: relative;
+  left: 50px;
+  top: 300px;
+  color: black;
+}
+.position-absolute {
+  background-color: gold;
+  position: absolute;
+  right: 300px;
+  bottom: 100px;
+  color: black;
+  /* 부모가 static인 경우 뷰포트가 기준 */
+}
+.position-fixed {
+  background-color: blueviolet;
+  color: white;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  /* 무조건 뷰포트 기준 
+  스크롤 따라다님
+  */
+}

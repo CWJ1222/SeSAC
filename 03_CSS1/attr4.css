@@ -1,0 +1,55 @@
+.box {
+  display: inline-block;
+  width: 400px;
+  height: 800px;
+  border: 1px solid black;
+}
+.background {
+  background-color: aquamarine;
+  background: palegoldenrod;
+
+  /* 단축속성
+    color image repeat position / size
+    */
+  background: linear-gradient(to bottom, black, white);
+}
+
+.background-image {
+  background-image: url('../img/small_img.png');
+  background-repeat: repeat;
+  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+
+  /* background position */
+  background-position: top left;
+  background-position: center;
+  background-position: top center;
+  background-position: 100px;
+  /* 왼쪽으로부터 100 위로부터 100 */
+  background-position: 100px 10px;
+  /* 왼 100 위 10 */
+
+  background-size: auto;
+  /* 기본은 오토 원본사이즈 유지됨 */
+  background-size: 50px;
+  /* 가로만 50이 되고 세로축은 그 비율에 맞게 바뀜 */
+  background-size: 100px 200px;
+  /* 가로세로 직접 지정할 수도 잇음 */
+  background-size: cover;
+
+  /* 짧은쪽으로 맞처지고 빈공간이 남음 */
+  background-size: contain;
+
+  /* 긴쪽으로 맞춰지고 꽉 찬다*/
+  background-size: cover;
+
+  /* background attachment */
+  background-attachment: scroll;
+  /* 스크롤하면 같이 움직임 */
+  background-attachment: fixed;
+  /* 스크롤해도 남아 있다 */
+}
+
+body {
+  height: 1000px;
+}

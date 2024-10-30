@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  background: linear-gradient(white, orangered);
+}
+div {
+  width: 100px;
+  height: 100px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 100px;
+}
+.position-static {
+  background-color: pink;
+  position: static;
+  /* static이 기본값 
+  top left등을 줘도 움직이지 않음, 고정
+  속성의 영향이 없음
+*/
+}
+.position-relative {
+  /* 원래 있던 자리가 기준.
+  원래 자리가 남아 있음
+  문서 흐름을 해치지 않음
+  */
+  background-color: aquamarine;
+  position: relative;
+  left: 150px;
+  /* top: 50px; */
+}
+.position-absolute {
+  background-color: gold;
+  position: absolute;
+  right: 100px;
+  top: 300px;
+  /* 부모가 static인 경우 뷰포트가 기준 */
+}
+.position-fixed {
+  background-color: blueviolet;
+  color: white;
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  /* 무조건 뷰포트 기준 
+  스크롤 따라다님
+  */
+}
+.absolute2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  background-color: dodgerblue;
+  top: 0;
+  /* bottom: 0; */
+  line-height: 50px;
+}
+.parent {
+  position: relative;
+  width: 300px;
+  border: 3px dotted dodgerblue;
+}
+.parent > .circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  background-color: #9afaff;
+  left: 200px;
+  z-index: 10;
+}
+.circle2 {
+  background-color: #742;
+  left: 150px;
+  z-index: 9;
+}
+.circle3 {
+  background-color: #f333f3;
+  left: 100px;
+  z-index: 8;
+}
+.circle4 {
+  background-color: darkcyan;
+  left: 50px;
+  z-index: 7;
+}
+/* z-index가 z축을 나타내고 숫자가 높을수록 앞으로 튀어나옴 */
+.circle5 {
+  background-color: #eee;
+  left: 0px;
+  z-index: 6;
+}
