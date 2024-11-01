@@ -1,0 +1,139 @@
+.img-box {
+  width: 400px;
+  height: 250px;
+  background-color: beige;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  /* 화살표를 댓을 때 손가락 모양으로 바뀜 */
+  border: 1px solid gold;
+}
+
+.img-box img:hover {
+  /* transform 
+    skew : 기울이기 함수
+    skew(x_deg, y_deg), skewX(x_deg), skewY(y_deg)
+        
+    scale : 크기조절함수
+    scale(숫자, 숫자), scaleX(배수), scaleY(배수)
+
+    translate : 이동함수
+
+    rotate 회전함수
+3d함수에서는 perspective를 어떻게 하느냐에 따라 보이는게 차이 있음.
+
+    */
+  transform: skewX(30deg);
+  transform: skewY(30deg);
+  transform: skew(30deg, 30deg);
+
+  transform: scaleX(2);
+  transform: scaleY(0.7);
+  transform: scale(2, 0.5);
+  transform: scale(2);
+
+  transform: translateX(100px);
+  transform: translateY(100px);
+  transform: translate(100px, 50px);
+
+  transform: rotate(45deg);
+  transform: perspective(200px) rotateX(45deg);
+  transform: perspective(400px) rotateY(180deg);
+
+  backface-visibility: visible;
+  backface-visibility: hidden;
+
+  transform: translateX(50px);
+  transform: scaleX(1.2);
+  /* 단축속성 
+  transform : perspective() translate() scale() rotate() skew()
+  
+  */
+  transform: translateX(100px) scale(2);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: black;
+}
+
+.box1:hover {
+  background-color: pink;
+  height: 120px;
+  width: 120px;
+
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 2s;
+  transition-property: background-color;
+  /* 배경색만 자연스럽게 변경됨 */
+}
+
+.box2:hover {
+  background-color: brown;
+  transform: translate(100px) scaleX(2);
+  transition: transform 1s ease-in-out 2s;
+  /* transition: 속성 프로퍼티 듀레이션 타이밍함수 딜레이; */
+}
+.box3 {
+  transition: 0.6s;
+  /* 호버 후 서서히 변하게 하려면 호버 아닌 상태에 transition걸어줘야됨 */
+}
+.box3:hover {
+  /* opacity: 0; */
+  visibility: hidden;
+  /* 값이 정해져 있지 않은 속성은 부드럽게 변하는 게 적용되지 않는다.
+  visibility display같은 것들은 적용되지 않음 */
+}
+
+/* 가운데 정렬방법 3가지 */
+.outer {
+  width: 300px;
+  height: 300px;
+  background-color: aquamarine;
+}
+.outer .inner {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+
+/* 1. flex */
+
+.outer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer1 > .inner1 {
+}
+/* position absolute 안쓰는게 좋음 */
+.outer2 {
+  position: relative;
+}
+.outer2 > .inner2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer3 {
+  position: relative;
+}
+.outer3 > .inner3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* 2. postition transform */
+/* 3. position margin:auto */
