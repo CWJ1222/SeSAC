@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box1 {
+        background-color: yellow;
+        /* overflow: hidden; */
+      }
+      .box1 img {
+        float: left;
+        /* float: right; */
+      }
+      .box2 {
+        /* clear: both; */
+      }
+      .box1:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .box2 {
+        background-color: aqua;
+        height: 300px;
+      }
+      .box2:after {
+        clear: both;
+        content: '';
+        display: block;
+      }
+      .box2 li {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <img src="../../img/small_img.png" alt="푸우" />
+      <img src="../../img/small_img.png" alt="푸우" />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, ad
+        facere aut commodi, porro dolorum blanditiis voluptas numquam esse
+        reiciendis minima aspernatur voluptatibus? Ea doloribus ullam quis
+        aperiam natus similique!
+      </p>
+    </div>
+    <div class="box2">
+      <ul>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+      </ul>
+    </div>
+    <p>float속성은 태그를 가로 배열시키는 CSS입니다.</p>
+  </body>
+</html>

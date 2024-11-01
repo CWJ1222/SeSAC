@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가운데정렬</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .box1 {
+        background-color: yellow;
+      }
+      .box1 ul {
+        font-size: 0;
+        text-align: center;
+      }
+      .box1 ul li {
+        background-color: tomato;
+        width: 200px;
+        padding: 10px;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      .box2 {
+        background-color: blue;
+        font-size: 0;
+        text-align: center;
+      }
+      .box2 a {
+        background: green;
+        width: 100px;
+        padding: 10px;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      .box3 {
+        background: tomato;
+        height: 400px;
+        width: 500px;
+        margin-top: 50px;
+        margin: 50px auto 0;
+      }
+      .box3-1 {
+        background: pink;
+        height: 200px;
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .box4 {
+        background: greenyellow;
+        height: 400px;
+        width: 500px;
+        margin: 50px auto 0;
+        position: relative;
+      }
+      .box4-1 {
+        background: plum;
+        height: 200px;
+        width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <ul>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+      </ul>
+    </div>
+    <div class="box2">
+      <a href="#">인라인요소태그</a>
+      <a href="#">인라인요소태그</a>
+      <a href="#">인라인요소태그</a>
+      <a href="#">인라인요소태그</a>
+    </div>
+    <div class="box3">
+      <div class="box3-1">블락요소를 가운데 만드는 방법</div>
+    </div>
+
+    <div class="box4">
+      <div class="box4-1">공중에 뜬 박스를 가운데 위치 잡을 때</div>
+    </div>
+  </body>
+</html>
