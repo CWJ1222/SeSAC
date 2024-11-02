@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text1 {
+        position: relative;
+        animation-name: text1;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      }
+      @keyframes text1 {
+        0% {
+          left: 100vw;
+        }
+        25% {
+          /* left: 200px; */
+        }
+        50% {
+          /* left: 400px; */
+        }
+        75% {
+          /* left: 200px; */
+        }
+        100% {
+          left: 0;
+        }
+      }
+      .text2 {
+        position: relative;
+        animation-name: text2;
+        animation-duration: 2s;
+        /* animation-delay: 1.5s; */
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        white-space: nowrap;
+        overflow: hidden; /* 텍스트가 영역을 넘지 않도록 설정 */
+        width: 0; /* 초기 너비 설정 */
+        animation: typing 4s steps(30, end), blink;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text1">
+      "As I relax on the sofa and gaze around a room a thought hits me: this is
+      exactly the place I've been looking for all my life. A little hideaway in
+      some sinkhole somewhere. I'd always thought of it as a secret, imaginary
+      place,
+    </div>
+    <div class="text2">
+      and can barely believe that it actually exists. I close my eyes and take a
+      breath, and wonder of it all settles over me like a gentle cloud."
+    </div>
+  </body>
+</html>
