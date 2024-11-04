@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환율 정보 목록</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0073e6;
+        font-size: 1.2em;
+        transition: color 0.3s;
+      }
+
+      a:hover {
+        color: #005bb5;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>환율 정보</h2>
+
+    <ul>
+      <li>
+        <a
+          href="https://m.stock.naver.com/marketindex/exchange/FX_USDKRW"
+          target="_blank"
+          >달러 환율 (USD/KRW)</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://m.stock.naver.com/marketindex/exchange/FX_JPYKRW"
+          target="_blank"
+          >엔 환율 (JPY/KRW)</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://m.stock.naver.com/marketindex/exchangeWorld/EURUSD"
+          target="_blank"
+          >유로-달러 환율 (EUR/USD)</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>
