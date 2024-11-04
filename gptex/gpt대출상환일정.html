@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대출 상환 일정 계산기</title>
+  </head>
+  <body>
+    <h2>대출 상환 일정 계산기</h2>
+
+    <!-- 입력 필드 -->
+    <label for="principal">대출 금액 (원):</label>
+    <input
+      type="text"
+      id="principal"
+      required
+      oninput="formatPrincipalInput()"
+      placeholder="1,000,000"
+    /><br /><br />
+
+    <label for="interestRate">연 금리 (%):</label>
+    <input type="number" id="interestRate" step="0.01" required /><br /><br />
+
+    <label for="period">상환 기간 (개월):</label>
+    <input type="number" id="period" required /><br /><br />
+
+    <!-- 상환 방식 선택 -->
+    <label for="repaymentMethod">상환 방식:</label>
+    <select id="repaymentMethod">
+      <option value="원리금균등">원리금균등</option>
+      <option value="원금균등">원금균등</option>
+    </select>
+    <br /><br />
+
+    <!-- 첫 상환 날짜 선택 -->
+    <label for="startDate">첫 상환 날짜:</label>
+    <input type="date" id="startDate" required /><br /><br />
+
+    <button onclick="calculateSchedule()">상환 일정 계산</button><br />
+    <!-- 총 이자 상환액 표시 -->
+    <h3>총 이자 상환액: <span id="totalInterest">0</span> 원</h3>
+
+    <h3>상환 일정</h3>
+    <table border="1" id="scheduleTable">
+      <thead>
+        <tr>
+          <th>회차</th>
+          <th>상환일</th>
+          <th>상환금액 (원)</th>
+          <th>원금 상환액 (원)</th>
+          <th>이자 상환액 (원)</th>
+          <th>잔액 (원)</th>
+        </tr>
+      </thead>
+      <tbody id="scheduleBody"></tbody>
+    </table>
+
+    <script>
+      // 대출 금액 입력란에 천 단위 쉼표를 추가하는 함수
+      function formatPrincipalInput() {
+        const input = document.getElementById('principal');
+        let value = input.value.replace(/,/g, ''); // 쉼표 제거
+        value = parseFloat(value);
+
+        if (!isNaN(value)) {
+          input.value = value.toLocaleString(); // 천 단위로 쉼표 추가
+        }
+      }
+
+      function calculateSchedule() {
+        // 입력값 가져오기 (쉼표 제거 후 파싱)
+        const principal = parseFloat(
+          document.getElementById('principal').value.replace(/,/g, '')
+        );
+        const annualRate = parseFloat(
+          document.getElementById('interestRate').value
+        );
+        const months = parseInt(document.getElementById('period').value);
+        const startDate = new Date(document.getElementById('startDate').value);
+        const repaymentMethod =
+          document.getElementById('repaymentMethod').value; // 상환 방식
+
+        // 월 금리 계산
+        const monthlyRate = annualRate / 12 / 100;
+
+        // 표의 본문을 초기화
+        const scheduleBody = document.getElementById('scheduleBody');
+        scheduleBody.innerHTML = '';
+
+        let balance = principal; // 잔액
+        let totalInterest = 0; // 총 이자 상환액 초기화
+
+        for (let i = 1; i <= months; i++) {
+          let monthlyPayment, interestPayment, principalPayment;
+
+          if (repaymentMethod === '원리금균등') {
+            // 원리금균등 상환 방식: 매월 동일한 상환금액
+            monthlyPayment =
+              (principal * monthlyRate) /
+              (1 - Math.pow(1 + monthlyRate, -months));
+            interestPayment = balance * monthlyRate; // 이자 상환액
+            principalPayment = monthlyPayment - interestPayment; // 원금 상환액
+          } else if (repaymentMethod === '원금균등') {
+            // 원금균등 상환 방식: 매월 동일한 원금 상환액
+            principalPayment = principal / months;
+            interestPayment = balance * monthlyRate;
+            monthlyPayment = principalPayment + interestPayment;
+          }
+
+          balance -= principalPayment; // 잔액 업데이트
+          totalInterest += interestPayment; // 총 이자 상환액 누적
+
+          // 상환일 계산 (첫 상환 날짜 기준으로 매월 추가)
+          const paymentDate = new Date(startDate);
+          paymentDate.setMonth(paymentDate.getMonth() + i - 1);
+
+          // 상환 일정 행 추가
+          const row = document.createElement('tr');
+          row.innerHTML = `
+          <td>${i}</td>
+          <td>${paymentDate.toLocaleDateString()}</td>
+          <td>${Math.round(monthlyPayment).toLocaleString()}</td>
+          <td>${Math.round(principalPayment).toLocaleString()}</td>
+          <td>${Math.round(interestPayment).toLocaleString()}</td>
+          <td>${Math.max(Math.round(balance), 0).toLocaleString()}</td>
+        `;
+          scheduleBody.appendChild(row);
+        }
+
+        // 총 이자 상환액 출력
+        document.getElementById('totalInterest').innerText =
+          Math.round(totalInterest).toLocaleString();
+      }
+    </script>
+  </body>
+</html>

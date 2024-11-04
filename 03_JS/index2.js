@@ -145,3 +145,13 @@ console.log(typeof null); //object
 console.log(typeof und);
 console.log(typeof NaN);
 console.log(typeof function () {});
+
+console.log(`${typeof 5} isn't ${typeof 'aaa'} data type.`);
+console.log(
+  `typeof 를 array 이나 null에 사용하면, ${typeof null}결과를 얻을 수 있습니다.`
+);
+console.log(
+  'typeof 를 array나 null에 사용하면, "' +
+    typeof null +
+    '" 결과를 얻을 수 있습니다.'
+);
