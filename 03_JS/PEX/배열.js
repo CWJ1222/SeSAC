@@ -21,6 +21,6 @@ for (let index = 0; index < days.length; index++) {
 }
 console.log('------------------');
 
-for (let day of days) {
-  console.log(day);
+for (let a of days) {
+  console.log(a);
 }
