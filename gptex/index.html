@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 상단 메뉴바 -->
+    <header>
+      <div class="navbar">
+        <div class="logo">MyWebsite</div>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" onclick="showForm('login')">Login</a></li>
+            <li><a href="#" onclick="showForm('signup')">Sign Up</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+      <section class="welcome">
+        <h1>Welcome to My Website</h1>
+        <p>
+          This is a sample homepage with a responsive menu and login/signup
+          forms.
+        </p>
+      </section>
+    </main>
+
+    <!-- 회원가입 및 로그인 폼 -->
+    <div class="form-popup" id="loginForm">
+      <form class="form-container" onsubmit="return false">
+        <h2>Login</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+        <button type="submit" onclick="login()">Login</button>
+        <button type="button" onclick="hideForm()">Cancel</button>
+      </form>
+    </div>
+
+    <div class="form-popup" id="signupForm">
+      <form class="form-container" onsubmit="return false">
+        <h2>Sign Up</h2>
+        <label for="newUsername">Username</label>
+        <input type="text" id="newUsername" required />
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" required />
+        <button type="submit" onclick="signup()">Sign Up</button>
+        <button type="button" onclick="hideForm()">Cancel</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

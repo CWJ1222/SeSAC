@@ -1,0 +1,119 @@
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* 로그인/회원가입 폼 */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #333;
+  z-index: 1000;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+}
+
+.form-container button {
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.form-container button[type='button'] {
+  background-color: #ccc;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
