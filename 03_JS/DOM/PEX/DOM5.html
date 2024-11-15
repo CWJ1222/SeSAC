@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('click')">클릭</button>
+    <hr />
+    <button onclick="sayHello()">클릭2</button>
+    <hr />
+    <button id="btn">클릭3</button>
+    <hr />
+    <button id="btn2">클릭4</button>
+
+    <script>
+      function sayHello() {
+        alert('Hello');
+      }
+
+      const el = document.getElementById('btn');
+      el.onclick = sayHello; //()붙이면 반환값이 나오기 때문에 없이 넣어야 한다
+
+      const el2 = document.getElementById('btn2');
+      el2.addEventListener('click', sayHello); //sayHello자리에 직접 함수 작성가능
+    </script>
+  </body>
+</html>
