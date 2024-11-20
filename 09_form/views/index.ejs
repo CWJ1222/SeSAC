@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 전송</title>
+  </head>
+  <body>
+    <h2>GET 요청</h2>
+    <form action="/getForm" method="get">
+      <label> id: <input type="text" /> </label>
+      <!-- NAME이 없으면 데이터 전달이 안됨 -->
+      <br />
+      <label> email: <input type="email" name="email" /> </label>
+      <br />
+      <label> pw: <input type="password" name="pw" /> </label>
+
+      <button type="button">제출?</button>
+      <button type="submit">제출</button>
+    </form>
+
+    <h2>POST 요청</h2>
+    <form action="/postForm" method="post"></form>
+  </body>
+</html>
