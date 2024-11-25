@@ -14,6 +14,7 @@
       <fieldset>
         <legend>성별</legend>
         <label> <input type="radio" name="gender" value="male" /> 남자 </label>
+        <!-- label 하나에 인풋태그 하나만 있어야 됨. -->
         <label>
           <input type="radio" name="gender" value="female" /> 여자
         </label>
@@ -25,7 +26,7 @@
 
         <select name="year" id="year">
           <option value="" disabled selected>연도</option>
-          <% for (let i = 2023; i >= 1900; i--) { %>
+          <% for (let i = 2023; i >= 1980; i--) { %>
           <option value="<%= i %>"><%= i %></option>
           <% } %>
         </select>
