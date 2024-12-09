@@ -1,6 +1,6 @@
 const TeamModel = (sequelize, DataTypes) => {
   const team = sequelize.define(
-    'team',
+    "team",
     {
       team_id: {
         type: DataTypes.INTEGER,
@@ -14,7 +14,7 @@ const TeamModel = (sequelize, DataTypes) => {
     },
     {
       freezeTableName: true,
-    }
+    },
   );
   return team;
 };

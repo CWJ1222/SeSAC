@@ -1,6 +1,7 @@
 const PlayerModel = (sequelize, DataTypes) => {
   const game = sequelize.define(
-    'player',
+    "player",
+    // fk 설정은 models/index.js에서 설정
     {
       player_id: {
         type: DataTypes.INTEGER,
@@ -19,7 +20,7 @@ const PlayerModel = (sequelize, DataTypes) => {
     },
     {
       freezeTableName: true,
-    }
+    },
   );
 
   return game;
