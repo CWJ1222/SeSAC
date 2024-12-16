@@ -1,6 +1,6 @@
 const ProfileModel = (sequelize, DataTypes) => {
   const Profile = sequelize.define(
-    "profile",
+    'profile',
     {
       profile_id: {
         type: DataTypes.INTEGER,
@@ -19,7 +19,7 @@ const ProfileModel = (sequelize, DataTypes) => {
     },
     {
       freezeTableName: true,
-    },
+    }
   );
   return Profile;
 };
