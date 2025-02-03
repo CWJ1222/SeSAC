@@ -1,0 +1,14 @@
+*.pem
+img/
+**SeSAC_Dobong2_web/
+**react-todo-app/
+node_modules/
+.DS_Store/
+
+# misc
+.env
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

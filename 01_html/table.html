@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table 태그 사용하기</title>
+  </head>
+  <body>
+    <!-- 빨간 글자는 css가 권장됨 -->
+    <table
+      border="1"
+      width="200"
+      height="200"
+      align="center"
+      bgcolor="yellow"
+      bordercolor="red"
+      cellspacing="0"
+    >
+      <!-- caption은 표의 제목  -->
+      <caption>
+        테이블의 제목
+      </caption>
+      <tr align="center">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr align="center">
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr align="center">
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+
+    <br />
+    <!-- cellspacing 표의 선굵기, cellpadding 글자와 표간 간격 -->
+    <table border="1" cellspacing="0" cellpadding="10">
+      <tr>
+        <th>메뉴</th>
+        <th>가격</th>
+        <th>비고</th>
+      </tr>
+      <tr>
+        <td>떡볶이</td>
+        <td>5000원</td>
+        <td>2인이상가능</td>
+      </tr>
+      <tr>
+        <td>참치김밥</td>
+        <td>4000원</td>
+        <td>--</td>
+      </tr>
+      <tr>
+        <td>순대</td>
+        <td>4000원</td>
+        <td>간 허파 있어요</td>
+      </tr>
+    </table>
+    <br />
+    <h3>새로운 가격표</h3>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <caption>
+        새로운 표제목
+      </caption>
+      <tr>
+        <th>메뉴</th>
+        <th>가격</th>
+        <th>비고</th>
+      </tr>
+      <tr>
+        <td>떡볶이</td>
+        <td>5000원</td>
+        <td>2인이상가능</td>
+      </tr>
+      <tr>
+        <td>참치김밥</td>
+        <td rowspan="2">4000원</td>
+        <td>--</td>
+      </tr>
+      <tr>
+        <td>치즈김밥</td>
+        <!-- <td>4000원</td> 원래 있던 정보를 없애줘야 세로로 합쳐짐 rowspan세로로 합쳐짐, -->
+        <td>신메뉴</td>
+      </tr>
+      <tr>
+        <td colspan="3">순대(품절)</td>
+        <!-- <td>4000원</td> colspan이 가로로 칸 합침 -->
+        <!-- <td>간 허파 있어요</td> -->
+      </tr>
+    </table>
+  </body>
+</html>

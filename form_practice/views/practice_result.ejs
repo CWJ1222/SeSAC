@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESULT</title>
+    <style>
+      span {
+        color: coral;
+        font-weight: 700;
+      }
+      .roundbox {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <!-- addinfo에 따라 달라짐 -->
+
+  <body>
+    <h1><%=title%>결과 확인하기</h1>
+
+    <a href="/">홈으로 이동</a>
+    <br />
+    <p><span><%=userInfo.name%></span>님 환영합니다</p>
+    <p class="roundbox">성별 : <%=userInfo.gender%></p>
+    <p class="roundbox">
+      생년월일 : <%=userInfo.year%>/<%=userInfo.month%>/<%=userInfo.day%>
+    </p>
+    <p class="roundbox">관심사 : <%=userInfo.category%></p>
+
+    <% if(addInfo){ %>
+    <h3>다른 태그 작성해보기</h3>
+    <p>
+      좋아하는 색 :
+      <span><%= userInfo.favcolor %></span>
+    </p>
+    <p>이메일 : <%=userInfo.email%></p>
+    <% } %>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const colorSpan = document.querySelector('.color');
+        colorSpan.style.color = '<%= userInfo.color %>';
+      });
+    </script>
+  </body>
+</html>

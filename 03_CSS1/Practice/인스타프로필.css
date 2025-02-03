@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  position: relative;
+}
+
+.circle1 {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  /* background-color: #9afaff; */
+  background: linear-gradient(white, orangered, pink);
+
+  left: 100px;
+  top: 100px;
+  /* border: 1px dotted black; */
+  z-index: 1;
+}
+
+.circle2 {
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  position: absolute;
+  /* background-color: #9afaff; */
+  background: white;
+
+  left: 110px;
+  top: 110px;
+  /* border: 1px dotted black; */
+  z-index: 2;
+}
+
+.circle3 {
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  position: absolute;
+  /* background-color: #9afaff; */
+  /* background: black; */
+  background-image: url(../../img/greececountry.png);
+  left: 120px;
+  top: 120px;
+  /* border: 1px dotted black; */
+  z-index: 3;
+}
+.circle4 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+
+  background-image: url(../../img/26139_img.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 250px;
+  left: 200px;
+  top: 285px;
+  /* border: 1px dotted black; */
+  z-index: 4;
+}

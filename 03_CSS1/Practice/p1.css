@@ -1,0 +1,19 @@
+.box {
+  display: inline-block;
+  color: white;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border-radius: 30px;
+  font-weight: bold;
+  line-height: 200px;
+  text-align: center;
+}
+.fade:hover {
+  /* display: none; */
+  visibility: hidden;
+  transition-delay: 1s;
+}
+.box1 {
+  /* border-width: 10px 40px 40px 10px; */
+}

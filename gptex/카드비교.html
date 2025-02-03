@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카드 미리보기 링크</title>
+    <style>
+      /* 기본 스타일 */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* 카드 컨테이너 스타일 */
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      /* 개별 카드 스타일 */
+      .card {
+        width: 200px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>대표 카드사 모아보기</h2>
+
+    <!-- 카드 컨테이너 -->
+    <div class="card-container">
+      <!-- 신한카드 -->
+      <a
+        href="https://www.shinhancard.com/pconts/html/card/credit/MOBFM281/MOBFM281R11.html?crustMenuId=ms581"
+        target="_blank"
+      >
+        <div class="card">
+          <img src="../img/신한카드.png" alt="신한카드 미리보기" />
+          <div class="card-title">신한카드</div>
+        </div>
+      </a>
+
+      <!-- 국민카드 -->
+      <a
+        href="https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0047?pageNo=1&cateIdx=1"
+        target="_blank"
+      >
+        <div class="card">
+          <img src="../img/KB2.jpeg" alt="국민카드 미리보기" />
+          <div class="card-title">국민카드</div>
+        </div>
+      </a>
+
+      <!-- 하나카드 -->
+      <a
+        href="https://www.hanacard.co.kr/OPI31000000D.web?schID=pcd&mID=OPI31000005P&CT_ID=241704030444153"
+        target="_blank"
+      >
+        <div class="card">
+          <img src="../img/HANACARD.png" alt="하나카드 미리보기" />
+          <div class="card-title">하나카드</div>
+        </div>
+      </a>
+
+      <!-- 삼성카드 -->
+      <a
+        href="https://www.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001?webViewFirstPage=true"
+        target="_blank"
+      >
+        <div class="card">
+          <img src="../img/SAMSUNGCARD.png" alt="삼성카드 미리보기" />
+          <div class="card-title">삼성카드</div>
+        </div>
+      </a>
+
+      <!-- 우리카드 -->
+      <a
+        href="https://pc.wooricard.com/dcpc/yh1/crd/crd01/H1CRD201S00.do"
+        target="_blank"
+      >
+        <div class="card">
+          <img src="../img/wooricard.png" alt="우리카드 미리보기" />
+          <div class="card-title">우리카드</div>
+        </div>
+      </a>
+
+      <!-- 현대카드 -->
+      <a
+        href="https://www.hyundaicard.com/cpc/ma/CPCMA0101_01.hc"
+        target="_blank"
+      >
+        <div class="card">
+          <img src="../img/hyundaicard.png" alt="현대카드 미리보기" />
+          <div class="card-title">현대카드</div>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>

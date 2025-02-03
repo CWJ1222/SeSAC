@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: bisque;
+      }
+      .box1 p {
+        background-color: tomato;
+      }
+      .box1 .p1 {
+        text-align: left;
+      }
+      .box1 .p2 {
+        text-align: center;
+      }
+      .box1 .p3 {
+        text-align: right;
+      }
+      body {
+        text-align: center;
+        background-color: brown;
+        color: aquamarine;
+        border: 3px solid black;
+      }
+      /* body에 가운데 정렬을 넣어도 h2까지 가운데 정렬됨
+      상속됨
+      */
+    </style>
+  </head>
+  <body>
+    <h2>text-align 인라인 요소를 정렬</h2>
+    <div class="box1">
+      <p class="p1">
+        text-align:left <br />
+        <img src="../../img/small_img.png" alt="작은" />
+        <img src="../../img/small_img.png" alt="작은" />
+        <img src="../../img/small_img.png" alt="작은" />
+      </p>
+      <p class="p2">
+        text-align:center <br />
+        <img src="../../img/small_img.png" alt="작은" />
+      </p>
+      <p class="p3">
+        text-align:right <br />
+        <img src="../../img/small_img.png" alt="작은" />
+      </p>
+    </div>
+  </body>
+</html>

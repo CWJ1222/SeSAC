@@ -1,0 +1,115 @@
+.container {
+  max-width: 1000px;
+  height: 700px;
+  margin: 0 auto;
+  background-color: #333;
+
+  display: flex;
+  /* 
+  기본용어
+  주축 main axis
+  ~기본방향 좌>우
+  교차축 cross axis
+  
+  */
+
+  /* flex direction , 주축의 정렬방향
+  row(default) 좌>우
+  row-reverse 우>좌
+  column 위>아래
+  column-reverse 아래>위
+  
+  
+  */
+  flex-direction: row;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+
+  /* 
+flex-wrap : 줄바꿈 설정  
+  nowrap default. 한줄안에 찌그러짐
+  wrap 안찌그러짐, 다음줄로 넘어감
+  */
+  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  justify-content: center;
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-around; */
+
+  /* 교차축에 대한 정렬 방법
+<align-items>  
+  stretch(default) - container의 교차축방향으로 길이를 늘림
+  flex-start - 시작점으로 정렬
+  flex-end - 끝점으로 정렬
+  center - 중앙정렬
+  
+   
+  */
+  /* align-items: stretch; */
+  align-items: flex-start;
+  /* align-items: flex-end; */
+  /* align-items: center; */
+
+  /* 
+  align-content : 여러 행 정렬
+  (조건)flex wrap이 wrap상태여야(2줄 이상)유효
+  stretch
+  flex-start
+  flex-end
+  center
+  space-between
+  space-around
+  
+  */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-around; */
+  align-content: space-between;
+  /* align-content: space-evenly; */
+}
+
+/* justify content  주축의 정렬방법 */
+/*
+flex-direction이 row일때는 주축이 가로, 수평정렬
+flex-direction이 column일때는 주축이 세로, 수직정렬 
+flex-start(default), 아이쳄을 start기준으로 나열
+flex-end 끝으로 나열
+center 중앙정렬
+space-between 처음과 마지막 아이템이 컨테이너의 양 끝으로 이동, 나머지 영역을 일정하게 나눔
+sapce-evenly 아이템들의 모든 여백을 공평하게 갖도록 함
+space-around 양끝 영역의 단위가 1이라면 나머지 영역의 단위는 2.
+*/
+
+.container > .items {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 100px;
+}
+
+.container > .items.item1 {
+  background-color: red;
+}
+
+.container > .items.item2 {
+  background-color: orange;
+}
+
+.container > .items.item3 {
+  background-color: yellow;
+}
+
+.container > .items.item4 {
+  background-color: green;
+}
+
+.container > .items.item5 {
+  background-color: blue;
+}

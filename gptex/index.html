@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HandGold</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- 상단 메뉴바 -->
+    <header>
+      <div class="navbar">
+        <div class="logo">손안에 금융(손금)</div>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="금융사명단.html">금융사 명단</a></li>
+                <li><a href="대출상환일정.html">대출 상환 일정</a></li>
+                <li><a href="사칙연산.html">사칙 연산</a></li>
+                <li><a href="은행별재무제표.html">은행별 재무제표</a></li>
+                <li><a href="카드비교.html">카드 비교</a></li>
+                <li><a href="환율검색.html">환율 검색</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" onclick="showForm('login')">Login</a></li>
+            <li><a href="#" onclick="showForm('signup')">Sign Up</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+      <section class="welcome">
+        <h1>손금보러 갈 사람~</h1>
+        <p>손안의 복덩이 금덩이!!</p>
+      </section>
+    </main>
+
+    <!-- 회원가입 및 로그인 폼 -->
+    <div class="form-popup" id="loginForm">
+      <form class="form-container" onsubmit="return false">
+        <h2>Login</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+        <button type="submit" onclick="login()">Login</button>
+        <button type="button" onclick="hideForm()">Cancel</button>
+      </form>
+    </div>
+
+    <div class="form-popup" id="signupForm">
+      <form class="form-container" onsubmit="return false">
+        <h2>Sign Up</h2>
+        <label for="newUsername">Username</label>
+        <input type="text" id="newUsername" required />
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" required />
+        <button type="submit" onclick="signup()">Sign Up</button>
+        <button type="button" onclick="hideForm()">Cancel</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

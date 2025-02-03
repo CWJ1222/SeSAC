@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div[class^='box'] {
+        width: 150px;
+        height: 80px;
+        background-color: tomato;
+        transition: transform 0.5s;
+      }
+      .box1:hover {
+        transform: scale(2);
+        /* 
+        width height로 크기 조정도 가능함
+        그러나 다른 컨텐츠에 영향을 주게됨.
+        transform은 영향 미치지 않음
+         */
+      }
+      .box2:hover {
+        transform: translate(20px, 50px);
+      }
+      .box3:hover {
+        transform: rotate(180deg);
+      }
+      .box4:hover {
+        transform: skew(20deg, 40deg);
+      }
+      .box4-1:hover {
+        transform: skewX(20deg);
+      }
+      .trans_origin .box01 {
+        transform-origin: center;
+      }
+      .trans_origin .box01:hover {
+        transform: scale(1.5);
+      }
+      .trans_origin .box02 {
+        transform-origin: top left;
+      }
+      .trans_origin .box02:hover {
+        transform: rotate(20deg);
+      }
+      .trans_origin .box03 {
+        transform-origin: right bottom;
+      }
+      .trans_origin .box03:hover {
+        transform: rotate(-20deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>크기변형 scale</h2>
+    <div class="box1"></div>
+    <h2>위치변형 translate</h2>
+    <div class="box2"></div>
+    <h2>회전변형 rotate</h2>
+    <div class="box3"></div>
+    <h2>왜곡변형 skew</h2>
+    <div class="box4"></div>
+    <br /><br />
+    <div class="box4-1"></div>
+
+    <div class="trans_origin">
+      <h2>transform-origin</h2>
+      <section><div class="box01">가운데기준</div></section>
+      <section><div class="box02">상단기준</div></section>
+      <section><div class="box03">하단기준</div></section>
+    </div>
+    <!-- 중심축 옮기는 것 -->
+
+    <div class="example">
+      <img src="../../img/beach1.jpg" alt="바다" />
+      <p>바다가운데놓기</p>
+    </div>
+    <style>
+      .example {
+        position: relative;
+        display: inline-block;
+      }
+      .example p {
+        padding: 10px;
+        color: bisque;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </body>
+</html>

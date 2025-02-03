@@ -1,0 +1,58 @@
+@import "util2";
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.PostList {
+  header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    @include text-shadow(var(--shadow-black));
+    height: var(--height-header);
+    line-height: var(--height-header);
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+.PostItem {
+  text-align: left;
+  width: 50%;
+  @include box-style(var(--color-white), var(--shadow-black));
+  padding: 20px 30px;
+  margin: 40px auto;
+
+  .id {
+    font-weight: 500;
+    margin-right: 8px;
+    color: var(--color-primary);
+  }
+
+  .title {
+    color: rgb(123, 123, 123);
+  }
+
+  .body {
+    font-size: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: transform 0.4s;
+
+    .id,
+    .title {
+      font-weight: 700;
+    }
+  }
+
+  @include responsive(768px) {
+    width: 90vw;
+  }
+}

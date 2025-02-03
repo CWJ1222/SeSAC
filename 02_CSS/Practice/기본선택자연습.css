@@ -1,0 +1,13 @@
+body {
+  color: white;
+  background-color: gray;
+}
+span {
+  background-color: red;
+}
+ol > #first {
+  background-color: blue;
+}
+ol > .second {
+  background-color: green;
+}

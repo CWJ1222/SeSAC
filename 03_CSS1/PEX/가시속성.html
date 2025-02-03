@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        background: #369;
+        float: left;
+        margin-right: 20px;
+        /* box-sizing: border-box; */
+      }
+      div p {
+        height: 300px;
+        background-color: #ccc;
+      }
+      .box1 p {
+        display: none;
+      }
+      .box2 p {
+        opacity: 0;
+      }
+      /* 존재하지만 안보임 */
+      .box3 p {
+        visibility: hidden;
+      }
+
+      /* 팝업창은 none이나 hidden으로 하는게 좋음 */
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <h3>display:none</h3>
+      <p></p>
+    </div>
+    <div class="box2">
+      <h3>opacity:0</h3>
+      <p><a href="https://www.naver.com">네이버</a></p>
+    </div>
+    <div class="box3">
+      <h3>visibility:hidden</h3>
+      <p><a href="https://www.naver.com">네이버</a></p>
+    </div>
+  </body>
+</html>

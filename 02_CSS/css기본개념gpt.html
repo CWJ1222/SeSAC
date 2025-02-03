@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS 주요 개념 예시</title>
+    <style>
+      /* 1. 박스 모델 */
+      .box {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #333;
+        margin: 20px;
+        background-color: #f0f0f0;
+      }
+
+      /* 2. 글꼴, 문자 */
+      .text {
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      /* 3. 배경 */
+      .background {
+        background-color: #ffdd57;
+        background-image: url('https://via.placeholder.com/100');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+        padding: 20px;
+        color: #333;
+      }
+
+      /* 4. 배치 */
+      .position {
+        position: relative;
+        left: 50px;
+        top: 20px;
+        background-color: #d1c4e9;
+        padding: 20px;
+      }
+
+      /* 5. 플렉스 */
+      .flex-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #bbdefb;
+        height: 100px;
+      }
+      .flex-item {
+        background-color: #64b5f6;
+        padding: 10px;
+        color: white;
+      }
+
+      /* 6. 전환 */
+      .transform {
+        width: 100px;
+        height: 100px;
+        background-color: #8e24aa;
+        transform: rotate(45deg) scale(1.2);
+      }
+
+      /* 7. 변환 */
+      .transition {
+        width: 100px;
+        height: 100px;
+        background-color: #ff5722;
+        transition: background-color 0.3s ease;
+      }
+      .transition:hover {
+        background-color: #ffccbc;
+      }
+
+      /* 8. 띄움 */
+      .float-container {
+        background-color: #eeeeee;
+        padding: 20px;
+        overflow: hidden;
+      }
+      .float-box {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: #4caf50;
+        margin-right: 10px;
+      }
+
+      /* 9. 애니메이션 */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .animation {
+        width: 100px;
+        height: 100px;
+        background-color: #2196f3;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      /* 10. 그리드 */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        background-color: #c8e6c9;
+        padding: 20px;
+      }
+      .grid-item {
+        background-color: #81c784;
+        padding: 20px;
+        color: white;
+      }
+
+      /* 11. 다단 */
+      .columns {
+        column-count: 3;
+        column-gap: 20px;
+      }
+
+      /* 12. 필터 */
+      .filter {
+        width: 100px;
+        height: 100px;
+        background-color: #ffeb3b;
+        filter: blur(5px) brightness(0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">박스 모델</div>
+
+    <p class="text">글꼴, 문자 스타일</p>
+
+    <div class="background">배경 예시</div>
+
+    <div class="position">배치(Positioning) 예시</div>
+
+    <div class="flex-container">
+      <div class="flex-item">Flex 1</div>
+      <div class="flex-item">Flex 2</div>
+      <div class="flex-item">Flex 3</div>
+    </div>
+
+    <div class="transform">전환 예시</div>
+
+    <div class="transition">변환(Transition) 예시</div>
+
+    <div class="float-container">
+      <div class="float-box">Float 1</div>
+      <div class="float-box">Float 2</div>
+      <div class="float-box">Float 3</div>
+    </div>
+
+    <div class="animation">애니메이션</div>
+
+    <div class="grid-container">
+      <div class="grid-item">Grid 1</div>
+      <div class="grid-item">Grid 2</div>
+      <div class="grid-item">Grid 3</div>
+    </div>
+
+    <div class="columns">
+      다단 예시 텍스트입니다. 이 텍스트는 여러 열로 나뉘어 표시됩니다. 여기에
+      추가적인 텍스트를 넣어서 다단 레이아웃을 볼 수 있도록 해보세요.
+    </div>
+
+    <div class="filter">필터</div>
+  </body>
+</html>

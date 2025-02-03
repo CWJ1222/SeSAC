@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+@font-face {
+  font-family: 'GumiRomanceTTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/GumiRomanceTTF.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: beige;
+}
+
+.font-link {
+  font-family: 'Gaegu', sans-serif;
+}
+
+.font-import {
+  font-family: 'Gaegu', sans-serif;
+}
+
+.noonnu_font {
+  font-family: 'GumiRomanceTTF', sans-serif;
+}
+.container {
+  background-color: gold;
+  color: gray;
+}
+
+.container > .sentences {
+  /* font weight 글씨굵기 */
+  font-weight: 600;
+  font-size: 16px;
+  /* font-size: 1rem;
+  font-size: 1em; */
+  text-align: center;
+  text-align: left;
+
+  /* text decoration 꾸미기 */
+  text-decoration: underline;
+  /* overline line-through */
+
+  /* 줄간간격 */
+  line-height: 1.4;
+  line-height: 2;
+}
+.container a {
+  color: gray;
+  text-decoration: none;
+  /* 
+  색상지정방법
+  1.색상이름으로설정 - red blue purple...
+  2.rgb함수로 사용. (숫자,숫자,숫자)
+  숫자 - 0~255
+  rgba ~ a는 투명도 0~1
+3.#NNNNNN : r g b 와 관련된 숫자를 씀
+rgb(0,0,0) - black #000000
+rgb(255,255,255) - white #ffffff
+4.팔레트로 색 직접 지정하기
+
+  */
+}
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  text-align: center;
+  /* 글이 한줄일 떄는 세로기준 가운데 정렬로 사용한다. */
+  line-height: 100px;
+}

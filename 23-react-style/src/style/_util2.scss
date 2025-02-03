@@ -1,0 +1,23 @@
+:root {
+  --height-header: 80px;
+  --color-primary: rgb(119, 164, 255);
+  --color-secondary: rgb(123, 123, 123);
+  --color-white: rgb(243, 247, 255);
+  --shadow-black: rgba(0, 0, 0, 0.15);
+}
+
+@mixin text-shadow($color) {
+  text-shadow: 2px 2px 4px $color;
+}
+
+@mixin box-style($bg-color, $shadow-color) {
+  background-color: $bg-color;
+  box-shadow: 4px 4px 10px $shadow-color;
+  border-radius: 10px;
+}
+
+@mixin responsive($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

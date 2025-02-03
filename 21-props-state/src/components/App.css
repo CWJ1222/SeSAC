@@ -1,0 +1,13 @@
+.theme {
+  text-align: center;
+  color: brown;
+}
+.img {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+}

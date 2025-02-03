@@ -1,0 +1,150 @@
+.d_block {
+  display: block;
+  background-color: antiquewhite;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  /* padding 내부여백, margin 외부여백 */
+  padding: 10px;
+  margin: 10px;
+}
+.d-inline {
+  display: inline;
+  background-color: pink;
+  border: 1px solid blue;
+  width: 100px;
+  height: 100px;
+  /* inline에는 가로세로 적용 안됨 */
+  /* padding 위아래 배경색만 적용 */
+  padding: 10px;
+  margin: 10px;
+}
+.d-inline-block {
+  display: inline-block;
+  background-color: aliceblue;
+  border: 1px solid green;
+  width: 150px;
+  height: 150px;
+
+  padding: 10px;
+  margin: 10px;
+}
+
+.parent {
+  width: 500px;
+  height: 250px;
+  background-color: tomato;
+}
+.parent > .min {
+  min-width: 400px;
+  height: 100px;
+  background-color: bisque;
+}
+.parent > .max {
+  max-width: 400px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+/* 단위확인 */
+.box {
+  background-color: beige;
+  border: 1px solid black;
+}
+.box-px {
+  width: 50px;
+  height: 50px;
+}
+.box-view {
+  width: 50vw;
+  height: 50vh;
+}
+.box-per {
+  width: 50%;
+  height: 50%;
+}
+html {
+  font-size: 20px;
+}
+/* html의 폰트사이즈가 1rem */
+.rem {
+  font-size: 2rem;
+}
+/* 부모의 폰트사이즈가 1em */
+.em {
+  font-size: 2em;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  display: inline-block;
+  cursor: pointer;
+}
+.border {
+  /* width style color 순으로 단축속성 */
+  border: 1px solid black;
+  border-color: blue;
+  border-style: dotted;
+  border-width: 5px;
+  border-left: 2px dashed green;
+  border-top-style: solid;
+}
+/* 따로 지정한게 밑에 있기 때문에 나중 적용됨 */
+/* 단축속성이 가장 많이 사용됨 */
+.rounded {
+  border-radius: 10px;
+  border-radius: 5px 10px 20px 40px;
+  border-radius: 5px 20px 50px;
+  border-radius: 5px 50px;
+}
+/* redius할떄 px과 %는 모양이 다름 */
+/* 단축속성, 시계방향으로 진행 */
+
+.box-sizing {
+  border: 15px solid red;
+  padding: 20px;
+  background-color: greenyellow;
+}
+.content-box {
+  box-sizing: content-box;
+}
+.border-box {
+  box-sizing: border-box;
+}
+.d-none {
+  /* display: none; 속성 자리 다 없어짐*/
+  background-color: red;
+}
+.invisible {
+  /* visibility: hidden; 속성없어짐 자리만 남음 */
+  background-color: orangered;
+}
+.opacity-0 {
+  /* opacity: 0;  발동되도 속성이 살아 있음*/
+  /background-color: tomato;
+}
+
+.square > img[alt='푸사진'] {
+  width: 200px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+}
+/* 넘치면 스크롤이 생김 */
+.overflow-scroll {
+  overflow: scroll;
+}
+/* 이것도 스크롤생김 */
+/* 스크롤과 오토는 보이는 것이 브라우저별로 다를 수 있음 */
+.overflow-visible {
+  overflow: visible;
+  /* overflow-x: hidden;
+  overflow-y: auto; 
+  단축속성으로 작성 가능*/
+  overflow: hidden auto;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼태그 사용해보기</title>
+  </head>
+  <body>
+    <form>
+      <label> text<input type="text" /> </label>
+      <br />
+      <label for="emailId">email</label>
+      <!-- email은 브라우저에서 유효성 검증을 함 -->
+      <input type="email" id="emailId" placeholder="example@naver.com" />
+      <br />
+      <label for="email">email</label>
+      <input type="email" id="email" />
+      <br />
+      <label>email2<input type="email" /></label>
+      <br />
+      <label>
+        password<input type="password" placeholder="비밀번호작성" />
+      </label>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr />
+      <input type="color" />
+      <br />
+      <input type="range" name="" id="" />
+      <br />
+      <input type="file" name="" id="" />
+      <br />
+      <input type="number" name="" id="" />
+      <br />
+      <input type="button" value="버튼이다아아아" />
+      <br />
+      <input type="submit" value="submit이다아아아" />
+      <!-- submit은 서버에 제출할 때 사용함 -->
+      <br />
+      <button>버튼</button>
+      <button type="button">버튼</button>
+      <!-- 기본은 submit이지만 일반 버튼처럼 바꿀수 있다. -->
+      <br /><br />
+      <h5>다음 중 input타입이 아닌것은(모두고르시오)</h5>
+      <input type="checkbox" name="input" /> text
+      <input type="checkbox" name="input" /> click
+      <input type="checkbox" name="input" /> img
+      <input type="checkbox" name="input" /> date
+      <input type="checkbox" name="input" checked /> bread
+      <input type="checkbox" />etc
+      <br />
+      <h5>다음 중 img 태그의 속성은?</h5>
+      <label>
+        <input type="radio" name="img" />
+        title
+      </label>
+      <label>
+        <input type="radio" name="img" />
+        mouse
+      </label>
+      <label>
+        <input type="radio" name="img" />
+        mouse
+      </label>
+
+      <input type="radio" name="img" id="alt" />
+      <label for="alt">alt</label>
+      <input type="radio" name="img" />
+      <label for="type">type</label>
+
+      <!-- radio는 하나만 선택 가능 -->
+      <!-- label은 글자를 눌러도 앞의 박스가 선택된다. 묶어주기 때문에 -->
+
+      <!-- selcet -->
+      <br /><br /><br />
+      <select name="flower" id="">
+        <optgroup label="빨간">
+          <option value="장미">장미</option>
+          <option value="동백">동백</option>
+        </optgroup>
+        <optgroup label="하얀">
+          <option value="매화">매화</option>
+          <option value="목련">목련</option>
+        </optgroup>
+      </select>
+    </form>
+  </body>
+</html>

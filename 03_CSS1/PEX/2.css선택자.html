@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: tomato;
+      }
+      h2 {
+        color: #369;
+      }
+      h1.box1 {
+        color: green;
+      }
+      .box1 {
+        color: brown;
+      }
+      #logo {
+        text-decoration: underline;
+      }
+      .box1 p {
+        color: red;
+      }
+      .box1 li {
+        font-size: 20px;
+      }
+      .box1 div ul {
+        background-color: yellow;
+      }
+      .box1 > .box2 {
+        text-decoration: underline;
+      }
+      h1:hover {
+        background-color: tomato;
+      }
+      .box1 ul li:nth-child(3) {
+        text-decoration: underline;
+      }
+      .box1 ul li:first-child {
+        font-weight: bold;
+      }
+      .box3 li:nth-child(odd) {
+        background-color: lightgray;
+      }
+      .box3 li:nth-child(even) {
+        background-color: orange;
+      }
+      .box2 p:first-of-type {
+        color: red;
+      }
+      .box1 p:last-of-type() {
+        color: aqua;
+      }
+      .box3 a[target] {
+        color: black;
+      }
+      .box3 a[class] {
+        color: black;
+      }
+      .box a[title='us'] {
+        color: black;
+      }
+      .box3 a[href$='hwp'] {
+        text-decoration: none;
+      }
+      .box3 a[href*='daum'] {
+        text-decoration: none;
+      }
+      .box3 a[title^='en'] {
+        text-decoration: none;
+      }
+      .box3 a[href$='hwp'],
+      .box3 a[href$='pdf'],
+      .box3 a[href$='txt'] {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="logo" class="box1">CSS선택자</h1>
+    <div class="box1">
+      <p>박스1</p>
+      <p class="box2">박스2</p>
+      <p>박스3</p>
+      <div>
+        <ul>
+          <li><span>list-1</span></li>
+          <li>list-2</li>
+          <li>list-3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box2">
+      <h2>CSS선택자2</h2>
+      <p>박스2-1</p>
+      <p>박스2-2</p>
+      <p>박스2-3</p>
+      <p>박스2-4</p>
+    </div>
+    <ul class="box3">
+      <li><a href="#" target="_blank">네이버</a></li>
+      <li><a href="#" class="button">버튼</a></li>
+      <li><a href="#" title="us">버튼</a></li>
+      <li><a href="#" title="english">영어</a></li>
+      <li><a href="주민등록등본.hwp">주민등록등본</a></li>
+      <li><a href="건강보험증서.hwp">건강보험증서</a></li>
+      <li><a href="인감증명서.hwp">인감증명서</a></li>
+      <li><a href="https://www,daum.net">다음</a></li>
+    </ul>
+  </body>
+</html>

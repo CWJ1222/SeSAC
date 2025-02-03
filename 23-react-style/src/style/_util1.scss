@@ -1,0 +1,29 @@
+@mixin move-circle($distance, $duration, $color, $top) {
+  width: 40px;
+  height: 40px;
+  background-color: $color;
+  border-radius: 50%;
+  position: absolute;
+  top: $top;
+
+  $animation-name: move-animation-#{$distance};
+  animation: #{$animation-name} $duration linear infinite;
+
+  @keyframes #{$animation-name} {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate($distance, 0);
+    }
+    50% {
+      transform: translate($distance, $distance);
+    }
+    75% {
+      transform: translate(0, $distance);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}

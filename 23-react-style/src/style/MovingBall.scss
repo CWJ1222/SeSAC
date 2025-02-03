@@ -1,0 +1,24 @@
+@import "util1";
+
+.circle-container {
+  position: relative;
+  width: 200px;
+  height: 280px;
+  border: dotted 2px;
+
+  .circle {
+    position: absolute;
+
+    &.circle1 {
+      @include move-circle(40px, 2s, pink, 0px);
+    }
+
+    &.circle2 {
+      @include move-circle(80px, 2s, yellow, 40px);
+    }
+
+    &.circle3 {
+      @include move-circle(160px, 2s, green, 80px);
+    }
+  }
+}

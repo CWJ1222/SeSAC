@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폰트관련 css</title>
+    <style>
+      .box1 .p2 {
+        font-size: 26px;
+      }
+      .box1 .p3 {
+        font-size: 9px;
+      }
+      .box2 p {
+        background: yellow;
+      }
+      .box2 .p1 {
+        font-size: 30px;
+      }
+      .box2 .p2 {
+        font-size: 50px;
+      }
+      .box2 .p3 {
+        font-size: 30px;
+        /* line-height: 60px; */
+        line-height: 1;
+        /* 배수로 표현할 수 있고 글자픽셀의 배수를 넣을 수 있음 */
+      }
+      .box3 p {
+        background: pink;
+        width: 400px;
+      }
+      .box3 .p1 {
+        text-indent: 20px;
+      }
+      .box3 .p2 {
+        text-indent: -10px;
+      }
+
+      /* .box3 .p2 {
+        text-indent: -9999px;
+      } */
+      /* 글자만 멀리 보내버릴 때 */
+
+      .box4 .p1 {
+        /* 자간조정 */
+        letter-spacing: -5px;
+        /* -는 달라붙는것, +는 띄우는 것 */
+      }
+      .box5 .p1 {
+        font-size: 40px;
+        letter-spacing: -0.05em;
+        /* 폰트 사이즈를 주고 em으로 상대적 표현으로 해도 된다. */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>글자크기 font-size</h1>
+    <div class="box1">
+      <p class="p1">기본 글자크기 font-size 16px</p>
+      <p class="p2">글자크기 font-size 26px</p>
+      <p class="p3">최소 폰트 사이즈는 10px</p>
+    </div>
+
+    <h1>행간</h1>
+    <div class="box2">
+      <p class="p1">글자크기 30</p>
+      <p class="p2">글자크기 50</p>
+      <p class="p3">글자크기 30, 행간 60</p>
+    </div>
+
+    <h1>들여쓰기 text indent</h1>
+    <div class="box3">
+      <p class="p1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure
+        consequatur at est, dignissimos voluptatum numquam excepturi natus
+        dolores, maxime veniam maiores similique autem accusamus eligendi modi!
+        Amet odit corrupti nulla!
+      </p>
+      <p class="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sint
+        consequatur eveniet provident dolore hic corporis. Sint necessitatibus,
+        ducimus ipsum, provident aliquam voluptatum quas ab velit non eligendi
+        repellendus? Laboriosam.
+      </p>
+    </div>
+
+    <h1>자간 letter spacing</h1>
+    <div class="box4">
+      <p class="p1">안녕하세요</p>
+    </div>
+    <div class="box5">
+      <p class="p1">안녕하세요</p>
+    </div>
+  </body>
+</html>
