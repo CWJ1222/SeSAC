@@ -3,9 +3,11 @@ img/
 **SeSAC_Dobong2_web/
 **react-todo-app/
 node_modules/
+**/node_modules/
 .DS_Store/
 
 # misc
+**/.env
 .env
 .DS_Store
 .env.local
