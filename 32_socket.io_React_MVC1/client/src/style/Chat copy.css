@@ -1,0 +1,101 @@
+/* 전체 레이아웃 조정 */
+.chat-container {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* 좌측 공지사항 & 채팅 */
+.chat-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 20px;
+}
+
+/* 공지사항 스타일 */
+.notice-container {
+  width: 100%;
+  background-color: #ffeb3b;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.notice {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+/* 중앙 채팅창 */
+.chat-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 채팅 메시지 목록 */
+.chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.message {
+  padding: 6px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.message strong {
+  color: #007bff;
+}
+
+.message.sent {
+  background-color: #d1ecf1;
+  text-align: right;
+}
+
+.message.received {
+  background-color: #f8d7da;
+  text-align: left;
+}
+
+/* 우측 사용자 목록 */
+.user-sidebar {
+  flex: 1;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 180px;
+  max-height: 400px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.user-list li:last-child {
+  border-bottom: none;
+}

@@ -31,10 +31,7 @@ io.on("connection", (socket) => {
       // (2) 입장 성공, 내 닉네임 정보 전달
       socket.emit("entrySuccess", nickname);
       // (3) 입장 성공, 입장알림메세지 전체에게 전달
-      socket.broadcast.emit(
-        "notice",
-        `${nickname}님이 입장하셨습니다.`,
-      );
+      socket.broadcast.emit("notice", `${nickname}님이 입장하셨습니다.`);
       // (4) 입장 성공, 나를 포함한 전체 client 에게 전체 닉네임 정보 전달
       io.emit("updateNicks", nickInfo);
     }
@@ -42,8 +39,31 @@ io.on("connection", (socket) => {
 
   // [4-2] 메세지를 하나의 클라이언트에게 받아서
   // 전체 클라이언트에게 전달
-  socket.on("send", (msg) => {
-    io.emit("message", { id: nickInfo[socket.id], message: msg });
+  socket.on("send", (msgData) => {
+    // msgData:{myNick, dm="socket.id" 혹은 "all", msg}
+
+    if (msgData.dm === "all") {
+      // 전체에게 보내기
+      io.emit("message", {
+        id: msgData.myNick,
+        message: msgData.msg,
+      });
+    } else {
+      let dmSocketId = msgData.dm;
+      // 특정 클라이언트에게만 보내기 (나를 제외)
+      io.to(dmSocketId).emit("message", {
+        id: msgData.myNick,
+        message: msgData.msg,
+        isDm: true,
+      });
+
+      // 나에게만 보내기
+      socket.emit("message", {
+        id: msgData.myNick,
+        message: msgData.msg,
+        isDm: true,
+      });
+    }
   });
 
   // [클라이언트 퇴장 공고]
