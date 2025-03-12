@@ -7,6 +7,7 @@ node_modules/
 .DS_Store/
 
 *todo-app
+*HaeJo_Project
 
 # misc
 **/.env
