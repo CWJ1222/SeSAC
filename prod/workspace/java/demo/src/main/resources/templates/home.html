@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>홈</title>
+  </head>
+  <body>
+    <h1
+      th:if="${isAuthenticated}"
+      th:text="'안녕하세요, ' + ${name} + '님!'"
+    ></h1>
+    <h1 th:unless="${isAuthenticated}">
+      환영합니다! 로그인 또는 회원가입을 해주세요.
+    </h1>
+
+    <div>
+      <a th:if="${isAuthenticated}" href="/logout">로그아웃</a>
+      <a th:unless="${isAuthenticated}" href="/auth/signup">회원가입</a>
+      <a th:unless="${isAuthenticated}" href="/auth/login">로그인</a>
+    </div>
+  </body>
+</html>
